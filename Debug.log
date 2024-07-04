@@ -1,4 +1,0 @@
-2024-07-04 00:02:41,220 - INFO - gui.py default_config_check:33 - Checking config.ini for default settings
-2024-07-04 00:02:41,221 - WARNING - gui.py default_config_check:45 - Config.ini did not have Screen Size. Attempting to rewrite
-2024-07-04 00:02:41,221 - INFO - gui.py get_screen_size:15 - Getting Screen Size
-2024-07-04 00:02:41,253 - INFO - gui.py get_screen_size:28 - Writing Config.ini

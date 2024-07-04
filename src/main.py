@@ -9,10 +9,6 @@ def main():
     gui.show_frame(gui.home)
 
 
-
-
-
-
 if __name__ == "__main__":
     main()
     cdb.log.info("End Program - Clearing Terminal")
