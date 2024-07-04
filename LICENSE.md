@@ -30,11 +30,4 @@ location of the downloaded work, icon, photograph, illustration, or music. To
 maintain Free Account Holder status usage must comply with terms of this
 Agreement. 
 
-<a target="_blank" href="https://icons8.com/icon/60702/overtime">Schedule</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>  
-<a target="_blank" href="https://icons8.com/icon/100065/user-manual">User Manual</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>  
-<a target="_blank" href="https://icons8.com/icon/101379/python">Python</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-<a target="_blank" href="https://icons8.com/icon/102595/paint-palette">App</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-<a target="_blank" href="https://icons8.com/icon/62856/github">Github</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-<a target="_blank" href="https://icons8.com/icon/xBrQ97Arogyy/figma">Figma</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-<a target="_blank" href="https://icons8.com/icon/98956/home-page">Home</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-<a target="_blank" href="https://icons8.com/icon/102978/visual-studio">App</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+<a target="_blank" href="https://icons8.com/icon/60702/overtime">Schedule</a>, <a target="_blank" href="https://icons8.com/icon/100065/user-manual">User Manual</a>, <a target="_blank" href="https://icons8.com/icon/101379/python">Python</a>, <a target="_blank" href="https://icons8.com/icon/102595/paint-palette">Paint Palette</a>, <a target="_blank" href="https://icons8.com/icon/62856/github">Github</a>, <a target="_blank" href="https://icons8.com/icon/xBrQ97Arogyy/figma">Figma</a>, <a target="_blank" href="https://icons8.com/icon/98956/home-page">Home</a>, <a target="_blank" href="https://icons8.com/icon/102978/visual-studio">VSCode</a> icons by <a target="_blank" href="https://icons8.com">Icons8</a>
