@@ -1,16 +1,8 @@
-from ttkbootstrap.constants import *
+from ttkbootstrap.constants import *  # noqa: F403
 import configparser as cp
-import ttkbootstrap as tb
 import crowdebug as cdb
-from PIL import Image
 import tkinter as tk
-
 import utils as u
-import os
-
-
-def start_gui():
-    app = tk.Tk()
 
 
 # region ================== Screen Size Configuration ==================
@@ -20,7 +12,7 @@ config = cp.ConfigParser()
 
 def get_screen_size():
     cdb.log.info("Getting Screen Size")
-    sizeroot = Tk()
+    sizeroot = tk.Tk()
     screen_width, screen_height = (
         sizeroot.winfo_screenwidth(),
         sizeroot.winfo_screenheight(),
@@ -56,7 +48,6 @@ def default_config_check():
 
 # endregion
 
-
 # region ================== App Configuration ==========================
 def show_frame(frame):
     # Hide all frames
@@ -66,13 +57,18 @@ def show_frame(frame):
     frame.pack(fill="both", expand=True)
 
 
-app = tk.Tk()
+def app_config():
+    default_config_check()
+    config.read("config.ini")
+    configwidth = config.getint("Default Window Size", "width")
+    configheight = config.getint("Default Window Size", "height")
+    configposx = config.getint("Default Position", "x")
+    configposy = config.getint("Default Position", "y")
+    return configposy, configposx, configheight, configwidth
 
-config.read("config.ini")
-configwidth = config.getint("Default Window Size", "width")
-configheight = config.getint("Default Window Size", "height")
-configposx = config.getint("Default Position", "x")
-configposy = config.getint("Default Position", "y")
+
+configposy, configposx, configheight, configwidth = app_config()
+app = tk.Tk()
 app.minsize(configwidth, configheight)
 app.geometry(f"{configwidth}x{configheight}+{configposx}+{configposy}")
 
@@ -85,10 +81,10 @@ home = tk.Frame(app, bg="#FFAB7C", bd=0)
 home.pack(fill="both", expand=True)
 
 menu_bar = tk.Frame(home, bg="#A03900", height=80)
-menu_bar.pack(expand=False, fill="x", side=TOP)
+menu_bar.pack(expand=False, fill="x", side=TOP)  # noqa: F405
 
 legal_bar = tk.Frame(home, bg="#ffab7c", height=80)
-legal_bar.pack(expand=False, fill="x", side=BOTTOM)
+legal_bar.pack(expand=False, fill="x", side=BOTTOM)  # noqa: F405
 
 license_image = tk.PhotoImage(file=u.asset_path("licenses.png"))
 licensebutton = tk.Button(
@@ -139,7 +135,7 @@ schedulebutton.pack(side=tk.LEFT)
 schedule = tk.Frame(app, bg="#FFAB7C", bd=0)
 
 menu_bar_sch = tk.Frame(schedule, bg="#A03900", height=80)
-menu_bar_sch.pack(expand=False, fill="x", side=TOP)
+menu_bar_sch.pack(expand=False, fill="x", side=TOP)  # noqa: F405
 
 home_image_sch = tk.PhotoImage(file=u.asset_path("home.png"))
 homebutton_sch = tk.Button(

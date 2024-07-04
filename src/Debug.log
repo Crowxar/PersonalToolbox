@@ -1,0 +1,9 @@
+2024-07-03 23:58:52,445 - INFO - gui.py default_config_check:31 - Checking config.ini for default settings
+2024-07-03 23:58:52,445 - WARNING - gui.py default_config_check:43 - Config.ini did not have Screen Size. Attempting to rewrite
+2024-07-03 23:58:52,445 - INFO - gui.py get_screen_size:17 - Getting Screen Size
+2024-07-03 23:58:52,479 - INFO - gui.py get_screen_size:27 - Writing Config.ini
+2024-07-03 23:58:52,509 - INFO - utils.py asset_path:7 - Returning C:\Users\micha\Documents\Python\PersonalToolbox\src\Assets\licenses.png
+2024-07-03 23:58:52,511 - INFO - utils.py asset_path:7 - Returning C:\Users\micha\Documents\Python\PersonalToolbox\src\Assets\info.png
+2024-07-03 23:58:52,512 - INFO - utils.py asset_path:7 - Returning C:\Users\micha\Documents\Python\PersonalToolbox\src\Assets\home.png
+2024-07-03 23:58:52,513 - INFO - utils.py asset_path:7 - Returning C:\Users\micha\Documents\Python\PersonalToolbox\src\Assets\schedule.png
+2024-07-03 23:58:52,514 - INFO - utils.py asset_path:7 - Returning C:\Users\micha\Documents\Python\PersonalToolbox\src\Assets\home.png
