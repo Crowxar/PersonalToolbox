@@ -9,19 +9,18 @@ from pathlib import Path
 from tkinter import Tk, Canvas, Button, PhotoImage
 
 
-OUTPUT_PATH = Path(__file__).parent
-ASSETS_PATH = OUTPUT_PATH / Path(r"C:\Users\micha\OneDrive\Pictures\Documents\VSCode Files\GithubTest\PersonalToolbox\src\Assets\Homeframe")
+OUTPUT_PATH = (Path(__file__).resolve().parent.parent / "Assets").resolve()
 
+def relative_to_assets(frame: str, image:str) -> Path:
+    return OUTPUT_PATH / frame / image
 
-def relative_to_assets(path: str) -> Path:
-    return ASSETS_PATH / Path(path)
 
 
 window = Tk()
 
 window.geometry("1051x721")
 window.configure(bg="#FFAB7C")
-
+frame = "home_frame"
 
 canvas = Canvas(
     window,
@@ -36,7 +35,7 @@ canvas = Canvas(
 canvas.place(x=0, y=0)
 canvas.create_rectangle(0.0, 0.0, 1051.0, 80.0, fill="#A03900", outline="")
 
-button_image_1 = PhotoImage(file=relative_to_assets("button_1.png"))
+button_image_1 = PhotoImage(file=relative_to_assets(frame,"coding.png"))
 button_1 = Button(
     image=button_image_1,
     borderwidth=0,
@@ -46,7 +45,7 @@ button_1 = Button(
 )
 button_1.place(x=215.0, y=5.0, width=70.0, height=70.0)
 
-button_image_2 = PhotoImage(file=relative_to_assets("button_2.png"))
+button_image_2 = PhotoImage(file=relative_to_assets(frame,"figma.png"))
 button_2 = Button(
     image=button_image_2,
     borderwidth=0,
@@ -56,7 +55,7 @@ button_2 = Button(
 )
 button_2.place(x=145.0, y=5.0, width=70.0, height=70.0)
 
-button_image_3 = PhotoImage(file=relative_to_assets("button_3.png"))
+button_image_3 = PhotoImage(file=relative_to_assets(frame,"github.png"))
 button_3 = Button(
     image=button_image_3,
     borderwidth=0,
@@ -66,7 +65,7 @@ button_3 = Button(
 )
 button_3.place(x=75.0, y=5.0, width=70.0, height=70.0)
 
-button_image_4 = PhotoImage(file=relative_to_assets("button_4.png"))
+button_image_4 = PhotoImage(file=relative_to_assets(frame,"info.png"))
 button_4 = Button(
     image=button_image_4,
     borderwidth=0,
@@ -76,7 +75,7 @@ button_4 = Button(
 )
 button_4.place(x=911.0, y=651.0, width=70.0, height=70.0)
 
-button_image_5 = PhotoImage(file=relative_to_assets("button_5.png"))
+button_image_5 = PhotoImage(file=relative_to_assets(frame,"hue.png"))
 button_5 = Button(
     image=button_image_5,
     borderwidth=0,
@@ -86,7 +85,7 @@ button_5 = Button(
 )
 button_5.place(x=285.0, y=5.0, width=70.0, height=70.0)
 
-button_image_6 = PhotoImage(file=relative_to_assets("button_6.png"))
+button_image_6 = PhotoImage(file=relative_to_assets(frame,"schedule.png"))
 button_6 = Button(
     image=button_image_6,
     borderwidth=0,
@@ -96,7 +95,7 @@ button_6 = Button(
 )
 button_6.place(x=355.0, y=5.0, width=70.0, height=70.0)
 
-button_image_7 = PhotoImage(file=relative_to_assets("button_7.png"))
+button_image_7 = PhotoImage(file=relative_to_assets(frame,"home.png"))
 button_7 = Button(
     image=button_image_7,
     borderwidth=0,
@@ -106,7 +105,7 @@ button_7 = Button(
 )
 button_7.place(x=5.0, y=5.0, width=70.0, height=70.0)
 
-button_image_8 = PhotoImage(file=relative_to_assets("button_8.png"))
+button_image_8 = PhotoImage(file=relative_to_assets(frame,"licenses.png"))
 button_8 = Button(
     image=button_image_8,
     borderwidth=0,
@@ -116,7 +115,7 @@ button_8 = Button(
 )
 button_8.place(x=981.0, y=651.0, width=70.0, height=70.0)
 
-button_image_9 = PhotoImage(file=relative_to_assets("button_9.png"))
+button_image_9 = PhotoImage(file=relative_to_assets(frame,"vscode.png"))
 button_9 = Button(
     image=button_image_9,
     borderwidth=0,

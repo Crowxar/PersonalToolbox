@@ -58,7 +58,7 @@ configposy = config.getint('Default Position', 'y')
 app.minsize(configwidth, configheight)
 app.geometry(f"{configwidth}x{configheight}+{configposx}+{configposy}")
 style = ttk.Style(theme='superhero')
-style.configure('TCheckbutton', font = 22)
+#style.configure('TCheckbutton', font = 22)
 
 # endregion
 
