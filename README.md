@@ -11,3 +11,10 @@ Program Files Directory: Many applications install their executable files (exe f
 %APPDATA%\YourApplication\Database
 AppData Directory: User-specific data, settings, and caches are often stored in the %APPDATA% directory. For example, C:\Users\Username\AppData\Roaming\YourApplication.
 
+- Your name
+
+- Project title
+
+- Links to website & social media
+
+- Contact details
