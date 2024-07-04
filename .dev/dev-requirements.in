@@ -1,0 +1,5 @@
+-r requirements.in
+black
+ruff
+pytest
+pip-tools
