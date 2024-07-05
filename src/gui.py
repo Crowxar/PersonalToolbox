@@ -3,6 +3,8 @@ import configparser as cp
 import crowdebug as cdb
 import tkinter as tk
 import utils as u
+import markdown2
+import os as os
 
 
 # region ================== Screen Size Configuration ==================
@@ -93,7 +95,7 @@ licensebutton = tk.Button(
     borderwidth=0,
     highlightthickness=0,
     relief="flat",
-    command=lambda: print("License clicked"),
+    command=lambda: display_license(),
 )
 licensebutton.pack(side=tk.RIGHT)
 
@@ -149,6 +151,33 @@ homebutton_sch = tk.Button(
 homebutton_sch.pack(side=tk.LEFT)
 
 # endregion
+
+# region ================== License Window Code ========================
+def display_license():
+    license_window = tk.Toplevel()
+    license_window.title("License Information")
+
+
+    current_dir = os.path.dirname(__file__)  # Get the current directory of the script
+    license_path = os.path.abspath(os.path.join(current_dir, '..', 'license.md'))
+    with open(license_path, 'r', encoding='utf-8') as file:
+        license_text = file.read()
+
+
+    license_to_HTML = markdown2.markdown(license_text)
+
+    text_widget = tk.scrolledtext.ScrolledText(license_window, wrap=tk.WORD, width=80, height=20)
+    text_widget.insert(tk.END, license_to_HTML)
+    text_widget.configure(state='disabled')
+    text_widget.pack(expand=True, fill=tk.BOTH)
+
+    
+
+
+# endregion
+
+
+
 
 show_frame(home)
 app.mainloop()

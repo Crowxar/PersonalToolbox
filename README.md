@@ -9,5 +9,4 @@ GUI
 
 
 ## Planned
-
 Color Picker

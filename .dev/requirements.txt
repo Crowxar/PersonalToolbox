@@ -8,3 +8,5 @@ pillow==10.4.0
     # via ttkbootstrap
 ttkbootstrap==1.10.1
     # via -r requirements.in
+markdown2==2.4.13
+    # via -r requirements.in
