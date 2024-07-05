@@ -4,9 +4,13 @@
 #
 #    pip-compile requirements.in
 #
-markdown2==2.4.13
+markdown==3.6
     # via -r requirements.in
 pillow==10.4.0
-    # via ttkbootstrap
+    # via
+    #   tkinterweb
+    #   ttkbootstrap
+tkinterweb==3.23.10
+    # via -r requirements.in
 ttkbootstrap==1.10.1
     # via -r requirements.in

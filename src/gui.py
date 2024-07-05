@@ -3,7 +3,6 @@ import configparser as cp
 import crowdebug as cdb
 import tkinter as tk
 import utils as u
-import markdown2
 import os as os
 from tkinterweb import HtmlFrame
 
@@ -158,16 +157,9 @@ def display_license():
     license_window = tk.Toplevel()
     license_window.title("License Information")
 
-
-    current_dir = os.path.dirname(__file__)  # Get the current directory of the script
-    license_path = os.path.abspath(os.path.join(current_dir, '..', 'LICENSE.md'))
-    with open(license_path, 'r', encoding='utf-8') as file:
-        license_text = file.read()
-
-
-    license_to_HTML = markdown2.markdown(license_text)
-
+    license_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'LICENSE.md'))
     html_frame = HtmlFrame(license_window)
+    html_frame.load_file(u.create_HTML_file(license_path))
     html_frame.pack(fill="both", expand=True)
 
 
