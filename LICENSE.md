@@ -58,7 +58,7 @@ The following libraries are licensed under the MIT License:
 
 - ttkbootstrap ([link to library](https://github.com/israel-dryer/ttkbootstrap?tab=readme-ov-file)) Copyright (c) 2021 Israel Dryer
 - python-markdown2 ([link to library](https://github.com/trentm/python-markdown2?tab=License-1-ov-file)) Copyright (c) 2012 Trent Mick, 2010 ActiveState Software Inc. 
-- Library 3 (link to library) Copywrite
+- TkinterWeb ([link to library](https://github.com/Andereoo/TkinterWeb?tab=MIT-1-ov-file)) Copyright (c) 2024 Andereoo
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
