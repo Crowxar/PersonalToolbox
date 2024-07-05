@@ -52,8 +52,8 @@ def default_config_check():
 
 # region ================== App Configuration ==========================
 def show_frame(frame):
-    # Hide all frames
-    for f in (home, schedule):
+    # Hide all frames except the current one
+    for f in (home, schedule, license_frame):
         f.pack_forget()
     # Show the selected frame
     frame.pack(fill="both", expand=True)
@@ -95,7 +95,7 @@ licensebutton = tk.Button(
     borderwidth=0,
     highlightthickness=0,
     relief="flat",
-    command=lambda: display_license(),
+    command=lambda: show_frame(license_frame),
 )
 licensebutton.pack(side=tk.RIGHT)
 
@@ -153,6 +153,49 @@ homebutton_sch.pack(side=tk.LEFT)
 # endregion
 
 # region ================== License Window Code ========================
+license_frame = tk.Frame(app, bg="#FFAB7C", bd=0)
+
+menu_bar_lic = tk.Frame(license_frame, bg="#A03900", height=80)
+menu_bar_lic.pack(expand=False, fill="x", side=TOP)  # noqa: F405
+
+home_image_lic = tk.PhotoImage(file=u.asset_path("home.png"))
+homebutton_lic = tk.Button(
+    menu_bar_lic,
+    image=home_image,
+    borderwidth=0,
+    highlightthickness=0,
+    relief="flat",
+    command=lambda: show_frame(home),
+)
+homebutton_lic.pack(side=tk.LEFT)
+
+legal_bar_lic = tk.Frame(license_frame, bg="#ffab7c", height=80)
+legal_bar_lic.pack(expand=False, fill="x", side=BOTTOM)  # noqa: F405
+
+license_image_lic = tk.PhotoImage(file=u.asset_path("licenses.png"))
+licensebutton_lic = tk.Button(
+    legal_bar_lic,
+    image=license_image_lic,
+    borderwidth=0,
+    highlightthickness=0,
+    relief="flat",
+    command=lambda: print("License Clicked"),
+)
+licensebutton_lic.pack(side=tk.RIGHT)
+
+info_image_lic = tk.PhotoImage(file=u.asset_path("info.png"))
+infobutton_lic = tk.Button(
+    legal_bar_lic,
+    image=info_image_lic,
+    borderwidth=0,
+    highlightthickness=0,
+    relief="flat",
+    command=lambda: print("Info clicked"),
+)
+infobutton_lic.pack(side=tk.RIGHT)
+
+#ADD THIS TO LICENSE INFO TO BE DISPLAYED 
+""" 
 def display_license():
     license_window = tk.Toplevel()
     license_window.title("License Information")
@@ -162,6 +205,10 @@ def display_license():
     html_frame.load_file(u.create_HTML_file(license_path))
     html_frame.pack(fill="both", expand=True)
 
+    license_window.focus_set()  # Set focus to the license window
+    license_window.grab_set()
+    show_frame(home)
+"""
 
 # endregion
 
