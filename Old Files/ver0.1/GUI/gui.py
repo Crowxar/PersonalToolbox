@@ -51,12 +51,7 @@ def default_config_check():
 # endregion
 
 # region ================== App Configuration ==========================
-def show_frame(frame):
-    # Hide all frames except the current one
-    for f in (home, schedule, license_frame):
-        f.pack_forget()
-    # Show the selected frame
-    frame.pack(fill="both", expand=True)
+
 
 
 def app_config():
