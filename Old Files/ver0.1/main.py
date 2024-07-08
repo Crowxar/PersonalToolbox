@@ -1,4 +1,4 @@
-import gui as gui
+import GUI.gui as gui
 import crowdebug as cdb
 
 

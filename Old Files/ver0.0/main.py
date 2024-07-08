@@ -1,5 +1,5 @@
 # pilot_list = ["Botzer","Hempen","Landry","O'Neil","Turner","Griffin","Segreti"]  
-import gui
+import GUI.gui as gui
 import configparser as cp
 
 config_file = 'config.ini'
