@@ -47,3 +47,6 @@ def set_default_config(file_path):
     with open(os.path.join(file_path, "config.ini"), 'w') as configfile:
         log.logging.info("Writing config.ini")
         config.write(configfile)
+
+if __name__ == "__main__":
+    main()

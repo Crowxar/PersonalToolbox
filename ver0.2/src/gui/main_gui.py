@@ -1,27 +1,35 @@
-import configparser
-import frames
 import tkinter as tk
+import gui.home_gui
+import gui.schedule_gui
+import configparser
+import os
+import config as conf
 
-"""
-Logic to handle the overall GUI - sub sections will be broken down to their
-individual files within the gui folder
-"""
+def app_config():
+    config = configparser.ConfigParser()
+    config.read(os.path.join(conf.appdata_path, 'config.ini'))
+    configwidth = config.getint("Default Window Size", "width")
+    configheight = config.getint("Default Window Size", "height")
+    configposx = config.getint("Default Position", "x")
+    configposy = config.getint("Default Position", "y")
+    return configposy, configposx, configheight, configwidth
 
+def main_window():
+    app = tk.Tk()
+    app.geometry("800x600")
 
+    def show_frame(frame_name):
+        if frame_name == "home":
+            home.tkraise()
+        elif frame_name == "schedule":
+            schedule.tkraise()
 
-config_file_location = r"ver0.2\output\config.ini"
-config = configparser.ConfigParser()
+    home = gui.home_gui.create_home_frame(app, show_frame)
+    schedule = gui.schedule_gui.create_schedule_frame(app, show_frame)
 
+    home.tkraise()
+        
+    app.mainloop()
 
-def show_frame(frame):
-    # Hide all frames except the current one
-    for f in (frames.home_gui):
-        f.pack_forget()
-    # Show the selected frame
-    frame.pack(fill="both", expand=True)
-
-
-
-
-
-
+if __name__ == "__main__":
+    main_window()

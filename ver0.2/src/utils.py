@@ -1,6 +1,12 @@
+import tkinter as tk
 import logging_config as log
 import os
 
+
+home_frame = tk.Frame()
+settings_frame = tk.Frame()
+
+all_frames = [home_frame, settings_frame]
 
 def ensure_file_exists(
         file_path: str, file_name: str, create: bool = False) -> bool:
@@ -17,3 +23,6 @@ def ensure_file_exists(
         return False
     log.logging.info(f"File {full_path} already exists")
     return True
+
+if __name__ == "__main__":
+    main()

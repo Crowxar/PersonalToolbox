@@ -1,8 +1,5 @@
-import utils
 import config as con
-import logging_config as log
-import os
-from gui.frames import gui_utils
+from gui import main_gui
 
 def main():
     """
@@ -10,8 +7,9 @@ def main():
     config files in localappdata and then launch the GUI.
     """
 
-    con.create_defaults()
-    gui_utils.basic_window()
+    #con.create_defaults()
+    main_gui.main_window()
     
+
 if __name__ == "__main__":
     main()
