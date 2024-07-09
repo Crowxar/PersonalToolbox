@@ -1,16 +1,50 @@
 import logging as log
+import tkinter as tk
 import os
+
+
+
+# region Screen Size Stuff
+def calculate_screensize():
+    sizeroot = tk.Tk()
+    screen_width, screen_height = (
+        sizeroot.winfo_screenwidth(),
+        sizeroot.winfo_screenheight())
+    sizeroot.destroy()
+    window_width = screen_width // 2
+    window_height = screen_height // 2
+    pos_x = window_width // 2
+    pos_y = window_height // 2
+
+    return screen_width, screen_height, window_width, window_height, pos_x, pos_y
+
+
+def centered_screen():
+    screen_width, screen_height, window_width, window_height, pos_x, pos_y = calculate_screensize()
+    return f"{window_width}x{window_height}+{pos_x}+{pos_y}"
+
+def print_screensize():
+    screen_width, screen_height, window_width, window_height, pos_x, pos_y = calculate_screensize()
+    print(f"Screen Size: {screen_width}x{screen_height}")
+    print(f"Window Size: {window_width}x{window_height}")
+    print(f"Position: {pos_x}, {pos_y}")
+    
+#endregion
+
+
 
 def clear_terminal(any=None):
     if any is None:
         os.system('cls')
         print('CDB - Program Cleared')
 
+
 def button_test(name): # command=lambda: DBG.button_test(name)
     if name:
         print(f"CDB - {name.capitalize()} Button Pressed")
     else:
         print("CDB - Button Pressed")
+
 
 def button_toggle_test(label_text):
     print(f"CDB - {label_text} toggled")

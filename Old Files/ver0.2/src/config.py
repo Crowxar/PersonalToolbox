@@ -23,6 +23,9 @@ def set_default_config(file_path):
     screen_width, screen_height = (
         sizeroot.winfo_screenwidth(),
         sizeroot.winfo_screenheight(),)
+    print(screen_width)
+    print(screen_height)
+
     sizeroot.destroy()
 
     # Setting Config values starting with screen height/width
@@ -35,6 +38,8 @@ def set_default_config(file_path):
     
     # Setting default window size to 1/2 of the screen size
     default_width, default_height = screen_width // 2, screen_height // 2
+    print(default_width)
+    print(default_height)
     config["Default Window Size"] = {
         "width": str(default_width), "height": str(default_height)
         }
@@ -42,7 +47,8 @@ def set_default_config(file_path):
     # Setting default position to the center of the window
     default_x, default_y = default_width // 2, default_height // 2
     config["Default Position"] = {"x": str(default_x), "y": str(default_y)}
-
+    print(default_x)
+    print(default_y)
     #Writing the config file
     with open(os.path.join(file_path, "config.ini"), 'w') as configfile:
         log.logging.info("Writing config.ini")
