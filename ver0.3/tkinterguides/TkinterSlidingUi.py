@@ -292,3 +292,6 @@ root.attributes("-topmost", True)
 
 root.mainloop()
 cdb.clear_terminal()
+
+
+
